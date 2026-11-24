@@ -1,0 +1,2 @@
+import type {ReactNode} from 'react';import {Link} from 'react-router-dom';import {ArrowRight} from 'lucide-react';
+export default function Section({title,titleAlign='left',link,children}:{title:string;titleAlign?:'left'|'center';link?:{text:string;href:string};children:ReactNode}){return <section className="section"><div className={`section-heading ${titleAlign==='center'?'section-heading--center':''}`}><h2>{title}</h2>{link&&<Link to={link.href}>{link.text}<ArrowRight size={18}/></Link>}</div>{children}</section>}
